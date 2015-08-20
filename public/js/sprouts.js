@@ -4,9 +4,9 @@ var page = 2
 
 $(window).scroll(function() {
   if($(window).scrollTop() + (window).innerHeight == $(document).height()) {
-    $.get("/tweets.json?page=" + page, function(fuck) {
+    $.get("/tweets.json?page=" + page, function(demtweetsthough) {
       page++;
-      fuck.forEach(function(tweet) {
+      demtweetsthough.forEach(function(tweet) {
         $('.tweets').append('<li class="tweet"><div class="body">'
         + tweet.text + '</div><div class="user">' + tweet.username
         + '</div></li>');
